@@ -1,0 +1,24 @@
+<template>
+    <lightning-card  variant="Narrow"  title="Account Summary" icon-name="standard:account">
+        <lightning-button-icon  icon-name="utility:down" variant="border-filled" alternative-text="Show More" slot="actions"></lightning-button-icon>
+        <p class="slds-p-horizontal_small">Card Body Narrow (custom component)</p>
+        <div class="slds-p-around_medium">
+            <p>Total Target 2: {totalTarget}</p>
+        </div>
+        <div class="slds-p-around_medium">
+            <p>Total Pipeline : {totalPipeline}</p>
+        </div>
+        <div class="slds-p-around_medium">
+            <p>Total Deviation : {totalDeviation}</p>
+        </div>
+        
+
+        <div style="height: 300px;" class="slds-p-around_medium">
+        <lightning-datatable
+                key-field="id"
+                data={data}
+                columns={columns}>
+        </lightning-datatable>
+    </div> 
+    </lightning-card>
+</template>
